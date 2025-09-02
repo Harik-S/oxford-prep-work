@@ -8,6 +8,10 @@
 \usepackage[italicdiff]{physics}
 \usepackage{gensymb}
 \usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
 
 \newcommand{\m}[1]{_{\mathrm{#1}}}
 
@@ -30,6 +34,34 @@
 \end{titlepage}
 \section{Mathematics}
 \subsection{Differentiation}
-
-
+\begin{enumerate}
+    \item $\diff{}{x} 5x^2= 10x$
+    \item $\diff{}{x} 4e^x = 4e^x$
+    \item $\diff{}{x} 4 \tan{x} = 4 \sec^2{x}$
+    \item $\diff{}{x} \sqrt{1+x} = \frac{1}{2\sqrt{1+x}}$
+    \item $\diff{}{x} 6 \cos{(x^2)}= -12x \sin{(x^2)}$
+    \item $\diff{}{x} e^{3x^4} = 12 x^3 e^{3x^4}$
+    \item $\diff{}{x} x^2 \sin{x} = 2x \sin{x} + x^2 \cos{x}$
+    \item $\diff{}{x} \frac{\tan{x}}{x} = \frac{x \sec^2{x} - \tan{x}}{x^2}$
+    \item $a(t)=\dot{v}(t) = 40t+400 e^{-t} \implies a(2)=80+400 e^{-2} = 134 \text{ ms}^{-2}$. Answer given to 3sf and SI units everywhere are assumed for the units.
+    \item $\diff{y}{x}=2xe^{-x} - x^2 e^{-x}=0 \implies x(x-2)=0 \implies x=0 \text{ or } x=2$. Consider that the function is everywhere non-negative, and at $x=0$, it takes the value of $0$, so this is a minima and the other stationary point is a maxima. Therefore, minima at $(0,0)$ and maxima at $(2,4e^{-2})$.
+\subsection{Integration}
+    \item $\int_{a}^{b} 3x^2 \mathrm{d}x=[x^3]_{a}^{b}=b^3-a^3$
+    \item $\int \sin{x} \cos^5{x} \mathrm{d} x= -\frac{1}{6} \cos^6{x} + c$
+    \item $\int x^4 + x^3 \mathrm{d} x = \frac{1}{5}x^5 + \frac{1}{4} x^4 + c$
+    \item $\int \frac{x}{\sqrt{1-x^2}} \mathrm{d} x=-\sqrt{1-x^2}+c$
+    \item $\int_{0}^{2\pi} \sin^2{x} \mathrm{d} x= \int_{0}^{2\pi} \frac{1}{2} - \frac{1}{2}\cos{2x} \mathrm{d} x = [\frac{1}{4}(2x-\sin{2x})]_0^{2\pi}=\pi$
+    \item $\int \tan{x} \mathrm{d}x = \int \frac{\sin{x}}{\cos{x}} \mathrm{d} x = -\ln{|\cos{x}|} + c = \ln{|\sec{x}|} + c$
+    \item Using $x=\sin{\theta}$, $\mathrm{d} x = \cos{\theta}$, so $\int \frac{1}{\sqrt{1-x^2}} \mathrm{d}x =\int \frac{\cos{\theta}}{\sqrt{1-\sin^2{\theta}}} \mathrm{\theta} = \theta + c = \arcsin{x}+c$
+    \item Using $x=a\sin{\theta}$, $\mathrm{d} x = a\cos{\theta}$, so $\int \frac{1}{\sqrt{a^2-x^2}} \mathrm{d}x =\int \frac{a\cos{\theta}}{a\sqrt{1-\sin^2{\theta}}} \mathrm{\theta} = \theta + c = \arcsin{\frac{x}{a}}+c$
+    \item $\int x \sin{x} = -x \cos{x} + \int \cos{x} = -x \cos{x} + \sin{x} +c$
+    \item $y=0 \implies x(8-x^3)=0 \implies x=0 \text{ or } 2$ so $A=\int_{0}^{2} 8x-x^4 \mathrm{d}x=[4x^2 - \frac{1}{5} x^5]_0^2=16-\frac{32}{5}=\frac{48}{5}$ so the area is $\frac{48}{5}$ units squared.
+    \item $x(2)=x(0)+\int_{0}^{2}v(t) \mathrm{d}t = \int_{0}^{2} (20t^2 - 400 e^{-t}) \mathrm{d}t=[\frac{20}{3}t^3+400e^{-t}]_0^2=\frac{160}{3} - 400 (1-e^{-2})= -293 \text{ m}$. So, the particle is $293$ metres from the origin (3sf, assuming SI everywhere).
+\subsection{Series}
+    \item $10.0 + 11.1 + 12.2 ... + 19.9 = 10 \times \frac{10+19.9}{2}=149.5$
+    \item $S_10 = \frac{x(1-(2x)^10)}{1-2x}$
+    \item $(a+2x)^n = a^n + 2na^{n-1} x + 2n(n-1) a^{n-2} x^2 + \frac{4}{3} n(n-1)(n-2) a^{n-3} x^3$
+\subsection{Functions}
+    \item The function is undefined when the denominator is $0$, which means $x=\pm 1$. When approaching $x=-1$ from below, 
+\end{enumerate}
 \end{document}
